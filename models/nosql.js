@@ -7,8 +7,9 @@
   127.0.0.1:9042.
   */
 
+  const config1= require('../middlewares/config');
  const cassandra = require('cassandra-driver');
 
- const client= new cassandra.Client({ contactPoints: ['127.0.0.1:9042']});
+ const client= new cassandra.Client({ contactPoints: [config1.CASSANDRA_HOST_CONNECT]});
 
  module.exports = client;

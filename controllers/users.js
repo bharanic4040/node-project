@@ -1,6 +1,5 @@
 
-const dbOp = require('../db/nosql');
-
+const dbOp = require('../models/nosql');
 //query strings
 const allUsersQuery = 'SELECT * FROM users.user';
 const byUserNameQuery = 'select * from users.user where first_name=?';
@@ -69,9 +68,6 @@ module.exports = function (app) {
             }
         });
     });
-
-    const PORT = 3000;
-    app.listen(PORT);
-    console.log("Listening on port ", PORT);
+    
 
 }
