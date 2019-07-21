@@ -24,7 +24,7 @@ app.set('view engine', 'ejs');
 require('./controllers/users')(app);
 require('./controllers/weather')(app);
 
-const PORT = 3000;
+const PORT = 8080;
     app.listen(process.env.PORT || PORT);
     console.log("Listening on port ", PORT);
 
